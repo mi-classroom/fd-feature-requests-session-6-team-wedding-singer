@@ -1,0 +1,43 @@
+.slideshow {
+    position: relative;
+    max-width: 960px;
+    /* Maximale Breite des Containers anpassen */
+    margin: 0 auto;
+    /* Zentrieren des Containers */
+    overflow: hidden;
+    /* Verhindert, dass Bilder außerhalb des Containers sichtbar sind */
+}
+
+.slideshow img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Das Bild im Container behalten, um das Seitenverhältnis beizubeh*/
+    .slideshow img.active {
+        display: block;
+    }
+}
+
+.slideshow .prev,
+.slideshow .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    /* Damit die Pfeile über den Bildern liegen */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Hintergrundfarbe der Pfeile anpassen */
+    padding: 10px;
+    /* Abstand um die Pfeile anpassen */
+}
+
+.slideshow .prev {
+    left: 10px;
+}
+
+.slideshow .next {
+    right: 10px;
+}
